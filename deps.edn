@@ -1,2 +1,7 @@
-{:deps {re-frame {:mvn/version "0.10.5"}}
- :paths ["src"]}
+{:mvn/repos {"adobe-public" {:url "https://repo.adobe.com/nexus/content/repositories/public"}
+             "jitpack" {:url "https://jitpack.io"}}
+ :paths ["src"]
+ :aliases {:test-git {:extra-deps {com.shakdwipeea/sample-smtp {:git/url "https://github.com/shakdwipeea/smtp"
+                                                                :sha "a47d5da9154a40b13f10ffe65c302d1d841149bc"}}}
+           ;; https://jitpack.io/#shakdwipeea/smtp/0.3.1
+           :test-jitpack {:extra-deps {com.github.shakdwipeea/smtp  {:mvn/version "0.3.1"}}}}}
