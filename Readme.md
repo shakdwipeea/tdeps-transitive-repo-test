@@ -8,5 +8,5 @@
 ## Reproducing bug
 
 ```shell
-clj -m clj-playground.core
+clj -A:test-git
 ```
